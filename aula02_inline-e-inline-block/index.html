@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Inline Block</title>
+    <style>
+        div, p, section, a, span, b, mark{
+            background-color: cadetblue;
+            padding: 5rem; /* ESPAÇAMENTO INTERNO  */
+            border: 1px solid black;
+            width:  70rem; /* largura  */
+            /* os atributos de padding, height e width não funcionam
+                coerentemente nas marcações inline */
+        }
+    </style>
+</head>
+<body>
+    <div>MARCAÇÃO DE DIV</div>
+    <mark>INLINE - MARCAÇÃO DE MARK</mark>
+    <p>MARCAÇÃO DE PARÁGRAFO</p>
+    <section>MARCAÇÃO DE SECTION</section>
+    <a href="">INLINE - MARCAÇÃO DE ÂNCORA</a>
+    <span>INLINE - MARCAÇÃO DE SPAN</span>
+    <b>INLINE - MARCAÇÃO DE B (negrito)</b> 
+    <!--
+    span: marcação SEM VALOR SEMÂNTICO do tipo inline 
+     -->
+    
+    <div>
+        <span></span>
+    </div>
+</body>
+</html>
