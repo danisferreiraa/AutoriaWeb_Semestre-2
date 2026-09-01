@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(14, 139, 14);
+            color: white;
+            border: 1px solid black;
+            padding: 2rem;
+            margin: 2rem auto;
+            width: 30rem;
+        }
+        form{
+            background-color: darkseagreen;
+            padding: 2rem;
+            margin: 2rem auto;
+            width: 30rem;
+        }
+        label{
+            width: 7rem;
+            display: inline-block;
+        }  
+        input{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: rgb(219, 234, 219);
+            border: 1px solid black;
+            padding: 1rem;
+            margin: 1rem;
+            width: 18rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>CADASTRO DE ESTÁGIO</h1>
+    <form action="resultado.html" method="post">
+        <!-- form é o componente  principal que demarca a área do formulário.
+         - uma página pode ter vários formulários
+         - cada formulario deve ter um botão de submissão
+         - o atributo de action é responsável por receber os dados
+         - o atributo de 'method' é a estratégia de de envio  -->
+        <label for="nome"> <!-- label: rótulo -->
+            Nome: 
+        </label>
+        <input type="text" id="nome"> <br> <br>
+        <label for="email">
+            <!-- o atributo de 'for' na marcação de label cria um vínculo com o input, o valor do 'id' precisa ser igual ao dado no 'for' -->
+            Email:
+        </label>
+        <input type="email" id="email"> <br> <br>
+        <label for="senha">
+            Senha:
+        </label>
+        <input type="password" id="senha"> <br> <br>
+        <!-- input do tipo senha, deixa os dados 'invisíveis' -->
+        <input type="submit" value="ENVIAR">
+
+    </form>
+</body>
+</html>
