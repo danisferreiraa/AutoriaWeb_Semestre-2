@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <style>
+        form{
+            border: 1px solid black;
+            margin: 2rem auto;
+            padding: 2rem;
+            width: 20rem;
+        }
+        label[for]{
+            /* formata apenas as marcações de label com o atributo de 'for' definido, isto é, os input do tipo 'radio' que estão dentro da label não terão as labels formatados  */
+            display: inline-block;
+            width: 7rem;
+            margin-bottom: 0.7rem;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="resultado.html">
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" disabled required placeholder="Digite seu nome"> <br>
+        <!-- A função do id no input:
+        (1) relacionar com o backend, esse valor será como o nome da variável
+        (2) relacionar com a label 'id' <-> 'for'
+        'required' é comando que pode ser adicionada em qualquer marcação de entrada de dados e define a obrigatoriedade de preenchimeto
+        'placeholder' é um atributo de rótulo que é adicionado dentro do campo de entrada de dados.
+        'disabled' desabilita o campo de entrada de dados
+        'value' é o valor do componente, muito usado para função de 'editar dados'
+        obs.: não há ordem na inserção desses atributos/comandos
+        -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email"> <br>
+
+        <label for="motivo">Motivo: </label>
+        <select id="motivo">
+            <option value="elogio">Elogio</option>
+            <option value="duvida">Dúvida</option>
+            <option value="reclamacao">Reclamação</option>
+        </select><br>
+        <!-- 
+        select é um componente chamado COMBOBOX
+        é usado para listra de muitositens similares, exemplo:
+        - lista de estados, lista de cidades, meses do ano, anos, dias do mês...
+        não indicado para listas curtas com uns 5 itens e muito diferentes como: status, profissão... porque é necessário -->
+
+
+        <label for="mensagem">Mensagem: </label>
+        <textarea id="mensagem"></textarea> <br>
+        <!-- 
+        'textarea' é um componente similar ao input text, porém, permite texto com enter's, isto é, mais longos.
+        A marcação é assim mesmo de entrada e saída com  vazio no meio
+        Não tem atributo 'value' porque o 'value' já é oq esta no meio do 'textarea'
+        -->
+        <input type="submit" value="ENVIAR">
+    </form>
+
+    <form action="">
+    <label for="busca">Palavra-chave:</label>
+        <input type="search" id="busca">
+        <input type="submit" value=""PESQUISAR>
+    </form>
+    <!-- Em uma página é possível ter vários formulários
+    para cada formulário é necessário ter uma marcação de for e input submit -->
+
+    <form action="">
+        <p>Qual sua disciplina favorita?</p>
+        <label><input type="radio" name="disc" value ="autoria">Autoria Web</label> <br>
+        <label><input type="radio" name="disc" value="prog">Programação</label> <br>
+        <label><input type="radio" name="disc" value="mat">Matemática</label> <br>
+        <label><input type="radio" name="disc" value="geo">Geografia</label> <br>
+        <!-- 
+        o componente 'radio' só permite um item selecionado
+        o componente 'checkbox' permite múltiplas escolhas
+        é obrigatório colocar o atributo de name e o valor se repete para cad aitem do grupo!!
+        e o atributo value também é obrigatório! 
+        -->
+        <br>
+        <input type="submit"''>
+    </form>
+</body>
+</html>
