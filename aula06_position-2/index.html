@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION ABSOLUTE</title>
+    <style>
+        *{ /* representa todas as marcações */ 
+            margin: 0;
+            padding: 0;
+        }
+        div.absolute{
+            background-color: ghostwhite;
+            border: 1px solid black;
+            padding: 2rem;
+            width: 15rem;
+            height: 15rem;
+            position: absolute;
+            opacity: 0.8;
+            top: 100px;
+            left: 200px;
+            /* bottom: ; */
+            /* right: ; */
+
+            /* 
+
+            - position fixed - fica FIXO mesmo usando a barra de rolagem
+            - position absolute fica "preso" na área, isto é, vai com a barra de rolagem
+            - os elementos de coordenadas são top, left, bottom e right, só devem ser usados 2: um para o eixo x e outro para o y
+            - pode definir só um eixo
+            - o valor geralmente é em px porque as coordenadas são exatas
+            - os atributos de coordenadas só funcionam quando se trabalha com position: relative, fixed ou absolute
+            - os valores das coordenadas podem ser negativos
+            
+            */
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100vw; /* unidade vw similar 100% vw = viewport width = largura do dispositivo */
+            padding: 2rem;
+            box-sizing: border-box;
+            background-color: aquamarine
+        }
+            div.relative{
+            background-color: blueviolet;
+            padding: 2rem;
+            position: relative;
+            top: 10px;
+            /* 
+            o position relative geralmente é usado para que um elemento 'absolute' fique condicionado a ele
+            */
+        }
+            div.absolute2{
+                background-color: aquamarine;
+                top: 150px;
+                left:250px;
+                z-index: 2;
+                /* quanto maior o valor, mais para frente o elemento ficará */
+            }
+            div.absolute3{
+                background-color: rgb(88, 175, 146);
+                top: 200px;
+                left:300px;
+                z-index: 1;
+                /* 
+                - o atributo z-index representa o eixo z e recebe um número inteiro. 
+                - não é obrigatório definir em todos os elementos com position 
+                - quanto maior o valor, mais para frente o elemento ficará
+                - por padrão a ordem de exibição dos elementos segue a estrutura do html,
+                quanto mais para baixo, mais para frente
+                */
+            }
+    </style>
+</head>
+<body>
+    <div class="relative">
+    <div class="absolute">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minus magnam qui aliquid iure amet itaque at nemo atque commodi. Possimus velit consequatur, id ea at laudantium deserunt commodi expedita!</p>
+    </div>
+    <div class="absolute absolute2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minus magnam qui aliquid iure amet itaque at nemo atque commodi. Possimus velit consequatur, id ea at laudantium deserunt commodi expedita!</p>
+    </div>
+    <div class="absolute absolute3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minus magnam qui aliquid iure amet itaque at nemo atque commodi. Possimus velit consequatur, id ea at laudantium deserunt commodi expedita!</p>
+    </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim modi repudiandae nam expedita ipsam perspiciatis vero nihil iure rem eos excepturi ipsa blanditiis dolore libero, provident, deserunt est sequi eveniet.</p>
+    <p>Nemo, adipisci? Ex voluptates amet ea, soluta aliquid fugiat asperiores officia beatae quod ipsa reiciendis illum vitae neque quis nam sed maxime corporis laborum magnam alias perspiciatis iste. Ipsum, deleniti!</p>
+    <p>Doloribus accusantium voluptatum, consequuntur maiores laborum impedit saepe molestias? Accusamus amet consequuntur laborum nam illo, debitis tempora suscipit ad, corporis culpa repudiandae dicta commodi sit. Illo repellat commodi amet animi!</p>
+    <p>Porro esse odit necessitatibus veniam expedita nostrum alias repellendus a quos, assumenda asperiores culpa nobis placeat amet? Accusantium ab repellendus, nesciunt nam itaque, ex modi voluptates laboriosam recusandae sunt aliquam.</p>
+    <p>Eaque, voluptatibus voluptate repellat dignissimos magni eius fugiat necessitatibus hic ad vitae quas rem exercitationem voluptatem unde ducimus nulla, facilis recusandae temporibus fuga vero aut minima. Aspernatur numquam quos exercitationem.</p>
+    <p>Numquam temporibus ullam laudantium ea explicabo, quae dicta repellat possimus facere. Optio dignissimos rem qui vel cupiditate. Accusantium autem cum dolore tenetur animi, dignissimos id non expedita sapiente praesentium adipisci.</p>
+    <p>Corrupti nulla harum similique quisquam totam, exercitationem veniam qui? Quas excepturi magnam voluptas alias officiis qui iste totam, quia ullam voluptatibus dicta nulla id. Beatae placeat earum recusandae modi aliquam!</p>
+    <p>Deserunt debitis id sint iure, laborum repellendus. Vero suscipit consectetur, quisquam aperiam aspernatur porro facilis dolorem atque reprehenderit unde necessitatibus, ab corporis similique officiis dignissimos quaerat sequi quam nisi. Omnis?</p>
+    <p>Qui eos quos delectus ea ullam at tenetur corporis libero sed itaque nobis esse fugit fugiat assumenda, odio aspernatur rem! Hic cum ex cumque facere enim veniam. Officiis, fuga quaerat.</p>
+    <p>Laudantium ullam possimus molestias quam voluptatibus, facere quia inventore rem eos iusto soluta ad, atque voluptatem magnam! Aperiam, id nesciunt, omnis hic quis, totam repudiandae doloremque harum nobis reiciendis vel.</p>
+    <footer>
+        <p>Desenvolvido por IFRN.</p>
+    </footer>
+</body>
+</html>

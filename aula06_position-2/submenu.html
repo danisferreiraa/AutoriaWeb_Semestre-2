@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body > ol{ /* o sinal de maior representa a seleção de um elemento que é FILHO DIRETO */
+            display: flex;
+        }
+        li{
+            position: relative;
+            margin-right: 2rem;
+            cursor: pointer;
+        }
+        ol ol{
+            position: absolute;
+            background-color: aqua;
+            padding: 2rem;
+            visibility: hidden; /* atributo de visibilidade */
+        }
+        body > ol > li:hover ol{
+            /* seleciona o li que está dentro do ol que está dentro do body */
+            /* ao passar o mouse no li, abre o seu respectivo submenu */
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Página Inicial</li>
+        <li>Programação
+            <ol>
+                <li>Palestras</li>
+                <li>Mesas</li>
+                <li>Minicursos</li>
+            </ol>
+        </li> <!-- Na sintaxe correta da lista, a lista interna fica dentro do LI -->
+        <li>Palestrantes</li>
+        <li>Organização</li>
+        <li>Exposição
+            <ol>
+                <li>Tech</li>
+                <li>Empreendedorismo</li>
+                <li>Projetos</li>
+            </ol>
+        </li>
+        <li>Contato</li>
+    </ol>
+    
+</body>
+</html>
