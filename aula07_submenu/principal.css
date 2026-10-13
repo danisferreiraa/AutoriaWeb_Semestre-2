@@ -1,0 +1,50 @@
+nav > ol{
+    /* O sinal de maior '>' é usado para SELECIONAR apenas o marcador que é o filho DIRETO do marcador anterior */
+    display: flex;
+}
+ol > li{
+    list-style-type: none;
+    position: relative;
+    padding: 1rem;
+    background-color: aqua;
+}
+ol ul{
+    position: absolute;
+    background-color: cadetblue;
+    visibility: hidden; /* visiblidade, podemos usar também 'display: none/block' */
+    padding: 2rem;
+    opacity: 0; /* atributo de opacidade define a transparência 0 
+    esse atributo recebe de 0 a 1*/
+    height: 0;
+}
+ul li a{
+    color: whitesmoke;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ol li:hover ul{
+    /* hover é o efeito que é chamado ao passar o mouse.
+    ao passar o mouse no li, essas formatações abaixo para o UL serão aplicadas
+*/
+    visibility: visible;
+    z-index: 10; /* para o submenu ficar em cima */
+    transition: opacity 2s ease-out, height 2s, background-color 2s;
+    opacity: 1;
+    height: 5rem;
+    background-color: rgb(52, 29, 255);
+}
+
+/*RESPONSIVIDADE*/ /* PX = RESOLUÇÃO*/
+@media screen and (max-width: 768px){
+    body{
+        background-color: green
+    }
+}
+
+@media screen and (max-width: 468px){
+    body{
+        background-color: red;
+    }
+}
