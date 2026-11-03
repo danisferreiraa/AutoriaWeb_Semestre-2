@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <h1>INTRODUÇÃO À LINGUAGEM JAVASCRIPT</h1>
+    <ul>
+        <li>Javascript é uma linguagem de programação FRONT-END e BACKEND</li>
+        <li>JAVASCRIPT NÃO É JAVA</li>
+        <li>DIFERENCIA MAIÚSCULAS DE MINÚSCULAS</li>
+        <li>NÃO PRECISA COLOCAR ";" NO FIM DA LINHA</li>
+        <li>TEM COMO OBJETIVO TRAZER: INTERATIVIDADE!</li>
+    </ul>
+
+    <p id="texto"></p>
+
+    <script>
+        //alert(3+9) //comentario ou /* */
+        //janela de alerta só para inicial, não usar porque é chata!
+        //window.confirm("Hoje tem aula de Minora?")
+
+        //janela de alert()só mostr auma informação
+        //janela de confirm retorna true or false
+        //janela de prompt
+        //let nome = window.prompt("Digite seu nome:")
+        //document.write("<p>"+nome+"</p>")
+
+        document.getElementById("texto").innerHTML = "OLÁ MUNDO!"
+        console.log("OLÁ MUNDO!")
+
+        
+    </script>
+    <h2>Variáveis</h2>
+    <script>
+        let nome = "INFOWEB"
+        let num = 10
+        let decimal = 3.5
+        let booleano = true
+        console.log(num+decimal)
+        num = "'IFRN"//JAVASCRIPT NÃO É "FORTEMENNTE TIPADO, ISTO É, NÃO É NECESSÀRIO definir tipo de variável e a varipável pode mudar de tipo depois sem precisar de conversão (algumas linguagens de programação tem essa obrigação)"
+    </script>
+    <h2>OPERADORES </h2>
+    <script>
+        console.log(54+89) //console log é mais profissional para impressão de mensagem de erros, por exemplo...
+        console.log(59-9)
+        console.log(59*9)
+        console.log(59/9)
+        let a = 8
+        console.log(a++) //incremento
+        console.log(a)
+        console.log(++a)
+        console.log(--a) //decremento
+    </script>
+    <form action="">
+        <label>NUM1: <input type="text" id="num1"></label>
+        <label>NUM2: <input type="text" id="num2"></label>
+        <button id="soma">SOMAR</button>
+    </form>
+    <p id="resultado"></p>
+    <script>
+        const btnsomar = document.querySelector("#soma")
+        //getelementBy pega o id e o querySelector seleciona qualquer um, inclusive com class
+        btnsomar.addEventListener("click", function(e){ //evento de clicks
+            let num1 = document.querySelector("#num1").value;
+            let num2 = document.querySelector("#num2").value;
+            document.querySelector("resultado").innerHTML = parseInt(num1) + parseInt(num2)
+        })
+    </script>
+</body>
+</html>
