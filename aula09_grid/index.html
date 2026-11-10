@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY GRID</title>
+    <style>
+        body>div{
+            border: 1px solid black;
+            margin: 0 auto;
+            max-width: 70rem;
+            padding: 2rem;
+            /* a quantidade de valores é equivalente a quantidade de colunas organizadas no grid-template-areas. unidade: rem, em, %, fr. A unidade fr significa "fracionado"  */
+            display: grid; /* diagramação que permite um mesclar cards verticalmente */
+            grid-template-areas: 
+            "a b c"
+            "a d d"
+            "e e e";
+            gap: 2rem; /* espaçamento entre os cards é similar ao margin que é defino nos próprios cards, logo, não usar margin nos cards */
+            grid-template-rows: 10rem 10rem 10rem; /* cuidado ao usar, porque limita a área em altura, isso faz com que se tiver muito texto, o texto vai ultrapassar a área: solução overflow */
+            grid-template-columns: 2fr 2fr 1fr; /* largura de cada coluna*/
+        }
+        div>div{
+            border: 1px solid gray;
+            /* margin: 1rem; */
+            padding: 1rem;
+            overflow: auto
+        }
+        .palestras{grid-area : a;}
+        .palestrantes{grid-area: b;}
+        .minicursos{grid-area: c;}
+        .hackthon{grid-area: d; }
+        .feira{grid-area: e;}
+    </style>
+</head>
+<body>
+    <!-- Código genérico apenas para entender o conceito -->
+    <div>
+        <div class="palestras">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus optio saepe veniam voluptates quibusdam explicabo totam eveniet aperiam praesentium id. Cum quibusdam optio quod ipsam, nulla quasi dicta incidunt numquam.</p>
+        </div>
+        <div class="palestrantes">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eum sed, rem, fuga dolorem corporis animi voluptate aspernatur nemo maiores, nisi provident aliquid. Est totam id molestiae in velit tempora!</p>
+        </div>
+        <div class="minicursos">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae labore cumque harum dolor quisquam omnis, iusto assumenda veniam esse ea ducimus officia pariatur laborum. Velit, officiis. Animi quos non est?</p>
+        </div>
+        <div class="hackthon">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ullam, fuga illo quidem accusantium cum architecto labore provident laboriosam voluptate corporis libero earum unde perspiciatis ab est deserunt voluptatem molestias.</p>
+        </div>
+        <div class="feira">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae quia sint odio hic aperiam est, voluptas accusamus dolore suscipit libero iusto molestiae velit? Natus quae rem dignissimos reiciendis est ipsum.</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
