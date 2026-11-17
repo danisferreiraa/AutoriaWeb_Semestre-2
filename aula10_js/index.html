@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array e Math</title>
+</head>
+<body>
+    
+    <h1>Array e Math</h1>
+    
+    <h2>Array</h2>
+    <script>
+        let alunos = ["João", "Luna", "Victor", "Eduarda"];
+        let numeros = [6, 7, 4, 2, 1]
+
+        console.log("Primeiro aluno da lista: " + alunos[0]);   
+        console.log(`Mostrando a lista como string:  ${alunos.toString()}`);
+        console.log(`Comprimento da lista: ${alunos.length}`);
+        console.log(`Ordenação: ${alunos.sort()}`);
+        alunos.push("Gabriel") //retorna o indíce novo
+        console.log(`Adiciona um item 'Gabriel': ${alunos.toString()}`)
+        console.log(`Último item da lista: ${alunos[alunos.length-1]}`)
+        alunos.pop(); //remove o último item da lista
+        console.log(`Último item removido: ${alunos.toString()}`)
+        //lista ordenada: Eduarda,João,Luna,Victor
+        alunos.splice(1,1);
+        //esse método recebe 2 parâmetros:
+        //1o: Quantidade de itens que serão removidos
+        //2o: Posição que os itens serão removios
+        console.log(`Lista sem 'João': ${alunos.toString()}`)
+    </script>
+
+    <h2>Math</h2>
+
+    <script>
+        console.log(`Arredonda o valor para o inteiro mais próximo: ${Math.round(4.6)}`);
+        // .ceil() Arredonda para cima
+        // .floor() Arredonda para baixo
+        console.log(`Valor máximo: ${Math.max(6,7,4,2)}`);
+        // para valor mínimo .min()
+        console.log(`valor randômico: ${Math.random()}`)
+        console.log(`valor randômico entre 0 e 10: ${Math.random()*10}`)
+    </script>
+
+    <label>
+        Nome: <input type="text" id="nome">
+    </label>
+    <button id="gerar">Gerar</button>
+    <p id="resultado"></p>
+
+    <script>
+        const gerar = document.querySelector("#gerar");
+        let nomedigitado = document.getElementById("#resultado");
+        gerar.addEventListener("click", function (e){
+            const nomedig = document.getElementById("nome")
+            let cores = ["green", "yellow", "red", "blue"];
+            // para pegar uma cor: cores[1], por exemplo, para pegar a cor yellow
+            // cores[Math.random()] - retorna 0.5487
+            // para limitar para  itens: Math.random()*4
+            // para arredondar: Math.round(Math.random()*4)
+            resultado.style.color = cores[Math.round(Math.random()*4)]
+            resultado.innerHTML = nomedig.value;
+        })
+    </script>
+</body>
+</html>
